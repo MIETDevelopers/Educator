@@ -17,7 +17,6 @@ function getMemoryAttributes() {   const memoryAttributes = {
        "nextIntent":[]
 
 
-       
        // "favoriteColor":"",
        // "name":"",
        // "namePronounce":"",
@@ -670,17 +669,97 @@ const aerospaceIntent_Handler =  {
     },
 };
 
-const aerospacetwoIntent_Handler =  {
+const chemengeIntent_Handler =  {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
-        return request.type === 'IntentRequest' && request.intent.name === 'aerospacetwoIntent' ;
+        return request.type === 'IntentRequest' && request.intent.name === 'chemengeIntent' ;
     },
     handle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
         const responseBuilder = handlerInput.responseBuilder;
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
-        let say = 'Hello from aerospacetwoIntent. ';
+        let say = 'Hello from chemengeIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const electronicengIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'electronicengIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from electronicengIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const electronicengjobsIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'electronicengjobsIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from electronicengjobsIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const industrialengIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'industrialengIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from industrialengIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const metalengniIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'metalengniIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from metalengniIntent. ';
 
 
         return responseBuilder
@@ -1172,7 +1251,11 @@ exports.handler = skillBuilder
         electricalengIntent_Handler, 
         electricalengtwoIntent_Handler, 
         aerospaceIntent_Handler, 
-        aerospacetwoIntent_Handler, 
+        chemengeIntent_Handler, 
+        electronicengIntent_Handler, 
+        electronicengjobsIntent_Handler, 
+        industrialengIntent_Handler, 
+        metalengniIntent_Handler, 
         AMAZON_NavigateHomeIntent_Handler, 
         LaunchRequest_Handler, 
         SessionEndedHandler
@@ -1312,8 +1395,7 @@ const model = {
           "name": "CSQIntent",
           "slots": [],
           "samples": [
-            "WHAT IS THE ROLE OF A COMPUTER SCIENCE ENGINEER",
-            "Would you like to know if it is suitable for you"
+            "WHAT IS THE ROLE OF A COMPUTER SCIENCE ENGINEER"
           ]
         },
         {
@@ -1416,10 +1498,39 @@ const model = {
           ]
         },
         {
-          "name": "aerospacetwoIntent",
+          "name": "chemengeIntent",
           "slots": [],
           "samples": [
-            "Yes"
+            "What is chemical engineering"
+          ]
+        },
+        {
+          "name": "electronicengIntent",
+          "slots": [],
+          "samples": [
+            "What is electronic engineering"
+          ]
+        },
+        {
+          "name": "electronicengjobsIntent",
+          "slots": [],
+          "samples": [
+            "Tell me about types of job profiles and recruiters "
+          ]
+        },
+        {
+          "name": "industrialengIntent",
+          "slots": [],
+          "samples": [
+            "What is industrial engineering"
+          ]
+        },
+        {
+          "name": "metalengniIntent",
+          "slots": [],
+          "samples": [
+            "Tell me about metallurgical engineering",
+            "Tell me about material engineering"
           ]
         },
         {
