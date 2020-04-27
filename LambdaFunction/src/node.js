@@ -17,6 +17,18 @@ function getMemoryAttributes() {   const memoryAttributes = {
        "nextIntent":[]
 
 
+       
+       // "favoriteColor":"",
+       // "name":"",
+       // "namePronounce":"",
+       // "email":"",
+       // "mobileNumber":"",
+       // "city":"",
+       // "state":"",
+       // "postcode":"",
+       // "birthday":"",
+       // "bookmark":0,
+       // "wishlist":[],
    };
    return memoryAttributes;
 };
@@ -538,6 +550,146 @@ const CSQQQQQQQQQEDIntent_Handler =  {
     },
 };
 
+const mechengrIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'mechengrIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from mechengrIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const mechengrtwoIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'mechengrtwoIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from mechengrtwoIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const mechengrrthreeIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'mechengrrthreeIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from mechengrrthreeIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const electricalengIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'electricalengIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from electricalengIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const electricalengtwoIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'electricalengtwoIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from electricalengtwoIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const aerospaceIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'aerospaceIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from aerospaceIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
+const aerospacetwoIntent_Handler =  {
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'IntentRequest' && request.intent.name === 'aerospacetwoIntent' ;
+    },
+    handle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        const responseBuilder = handlerInput.responseBuilder;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let say = 'Hello from aerospacetwoIntent. ';
+
+
+        return responseBuilder
+            .speak(say)
+            .reprompt('try again, ' + say)
+            .getResponse();
+    },
+};
+
 const AMAZON_NavigateHomeIntent_Handler =  {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
@@ -1014,6 +1166,13 @@ exports.handler = skillBuilder
         CSQQQQQQQDIntent_Handler, 
         CSQQQQQQQBIntent_Handler, 
         CSQQQQQQQQQEDIntent_Handler, 
+        mechengrIntent_Handler, 
+        mechengrtwoIntent_Handler, 
+        mechengrrthreeIntent_Handler, 
+        electricalengIntent_Handler, 
+        electricalengtwoIntent_Handler, 
+        aerospaceIntent_Handler, 
+        aerospacetwoIntent_Handler, 
         AMAZON_NavigateHomeIntent_Handler, 
         LaunchRequest_Handler, 
         SessionEndedHandler
@@ -1153,7 +1312,8 @@ const model = {
           "name": "CSQIntent",
           "slots": [],
           "samples": [
-            "WHAT IS THE ROLE OF A COMPUTER SCIENCE ENGINEER"
+            "WHAT IS THE ROLE OF A COMPUTER SCIENCE ENGINEER",
+            "Would you like to know if it is suitable for you"
           ]
         },
         {
@@ -1210,6 +1370,56 @@ const model = {
           "slots": [],
           "samples": [
             "WHAT IS THE AVERAGE SALARY OF A COMPUTER SCIENCE ENGINEER IN INDIA"
+          ]
+        },
+        {
+          "name": "mechengrIntent",
+          "slots": [],
+          "samples": [
+            "What is Mechanical engineering"
+          ]
+        },
+        {
+          "name": "mechengrtwoIntent",
+          "slots": [],
+          "samples": [
+            "What are the subjects in Mechanical Engineering"
+          ]
+        },
+        {
+          "name": "mechengrrthreeIntent",
+          "slots": [],
+          "samples": [
+            "Tell me about types of Job Profiles and Recruiters at MIET"
+          ]
+        },
+        {
+          "name": "electricalengIntent",
+          "slots": [],
+          "samples": [
+            "What is Electrical engineering"
+          ]
+        },
+        {
+          "name": "electricalengtwoIntent",
+          "slots": [],
+          "samples": [
+            "Tell me about Types of Job Profiles and Recruiters",
+            "Yes"
+          ]
+        },
+        {
+          "name": "aerospaceIntent",
+          "slots": [],
+          "samples": [
+            "What is Aerospace engineering"
+          ]
+        },
+        {
+          "name": "aerospacetwoIntent",
+          "slots": [],
+          "samples": [
+            "Yes"
           ]
         },
         {
