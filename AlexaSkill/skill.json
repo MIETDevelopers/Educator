@@ -1,0 +1,29 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Answers questions about courses at MIET",
+          "examplePhrases": [
+            "Educator what is engineering?",
+            "Is computer engineering suitable for me?"
+          ],
+          "name": "Educator",
+          "description": "Educator is a voice assisted academic counsellor to help students know about courses at MIET, Jammu"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "LambdaFunction/src"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
